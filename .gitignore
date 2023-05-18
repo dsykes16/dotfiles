@@ -3,3 +3,7 @@
 !/.oh-my-zsh
 !/.zshrc
 !/.vimrc
+!/.vim
+/.vim/*
+!/.vim/bundle
+!/.vim/autoload
