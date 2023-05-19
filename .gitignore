@@ -1,7 +1,8 @@
 /*
 !/.gitignore
-!/.oh-my-zsh
 !/.zshrc
+!/.oh-my-zsh
+!/.zsh_custom
 !/.vimrc
 !/.vim
 /.vim/*
