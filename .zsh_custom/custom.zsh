@@ -5,7 +5,7 @@ set -o noclobber
 PATH=$PATH:$HOME/.pub-cache/bin
 
 # rancher desktop
-PATH=$PATH:$HOME/.rd/bin
+#PATH=$PATH:$HOME/.rd/bin
 
 # go
 export GOPATH=$HOME
@@ -25,11 +25,11 @@ compinit && bashcompinit
 #source <(ent completion zsh)
 source <(atlas completion zsh)
 source <(kubectl completion zsh)
-source <(nerdctl completion zsh)
+#source <(nerdctl completion zsh)
 source <(flutter bash-completion)
 
 # Aliases
-alias docker=nerdctl
+#alias docker=nerdctl
 alias la='ls -lah'
 alias vim=/usr/local/bin/vim
 alias ent='go run -mod=mod entgo.io/ent/cmd/ent'
