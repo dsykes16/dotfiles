@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/coc.nvim"]
 	path = .vim/bundle/coc.nvim
 	url = git@github.com:neoclide/coc.nvim.git
+[submodule ".vim/bundle/vim-svelte-plugin"]
+	path = .vim/bundle/vim-svelte-plugin
+	url = https://github.com/leafOfTree/vim-svelte-plugin
