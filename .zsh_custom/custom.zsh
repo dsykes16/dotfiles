@@ -1,8 +1,17 @@
 # noclobber should be a *nix default
 set -o noclobber
 
+# gpg-agent ssh
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+gpg-connect-agent updatestartuptty /bye > /dev/null
+
 # dart/flutter
 PATH=$PATH:$HOME/.pub-cache/bin
+
+# rust
+PATH=$HOME/.cargo/bin:$PATH
 
 # rancher desktop
 # PATH=$PATH:$HOME/.rd/bin
@@ -10,6 +19,9 @@ PATH=$PATH:$HOME/.pub-cache/bin
 # go
 export GOPATH=$HOME
 PATH=$PATH:$(go env GOPATH)/bin
+
+# brew curl override
+PATH=/usr/local/opt/curl/bin:$PATH
 
 # pyenv
 eval "$(pyenv init -)"
@@ -33,3 +45,7 @@ source <(flutter bash-completion)
 alias la='ls -lah'
 #alias vim='/usr/local/bin/vim'
 alias ent='go run -mod=mod entgo.io/ent/cmd/ent'
+alias kc='kubectl'
+alias kca='kubectl apply -f'
+alias kcg='kubectl get'
+alias kcd='kubectl describe'
