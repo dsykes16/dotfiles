@@ -1,8 +1,9 @@
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
+" filetype plugin indent on
 set number
 
+" highlight CocInlayHint guifg=#d0d0d0 guibg=NONE ctermfg=252
 " nerd-tree
 nnoremap <leader>n :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
@@ -20,3 +21,7 @@ let g:dart_trailing_comma_indent = v:true
 "nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 "nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_disable_lsp = 1
+
+let g:vim_svelte_plugin_load_full_syntax = 1
+let g:vim_svelte_plugin_use_typescript = 1
+let g:vim_svelte_plugin_has_init_indent = 1
