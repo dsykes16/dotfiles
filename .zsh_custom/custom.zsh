@@ -39,6 +39,7 @@ compinit && bashcompinit
 source <(kubectl completion zsh)
 #source <(nerdctl completion zsh)
 source <(flutter bash-completion)
+[[ -e "/Users/$USER/lib/oci_autocomplete.sh" ]] && source "/Users/$USER/lib/oci_autocomplete.sh"
 
 # Aliases
 #alias docker=nerdctl
